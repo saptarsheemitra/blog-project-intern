@@ -23,13 +23,18 @@ const Nav = (props) => {
       window.location.pathname = "/login";
     });
   };
+
+  const dummyUpdate = () => {
+    alert("Sorry, I could not implement this feature.")
+  }
+
   return (
     <div className={css.navcontainer}>
       <div className={css.navmain}>
         <ul className={css.navlist}>
           <li className={css.navitems} onClick={homeRoute}>
             {" "}
-            Home
+            All Blogs
           </li>
            
          
@@ -40,7 +45,11 @@ const Nav = (props) => {
           ) : (
             <>
             <li className={css.navitems} onClick={newPostRoute}>
-            New Post
+            Write Blog
+          </li>
+          <li className={css.navitems} onClick={dummyUpdate}>
+            {" "}
+            Update Blog
           </li>
             <button className={css.tabitem} onClick={signOutUser}>Sign Out</button>
           </>

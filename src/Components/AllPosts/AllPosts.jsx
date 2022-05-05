@@ -17,7 +17,6 @@ const AllPosts = (props) => {
     const getPosts = async () => {
       const data = await getDocs(postsCollectionRef);
       setPostList(data.docs.map((doc) => ({ ...doc.data(), blogid: doc.id })));
-      console.log(postList);
     };
 
     // const getCooments = async () => {
