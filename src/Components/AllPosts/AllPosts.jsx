@@ -1,9 +1,10 @@
-import { getDocs, collection } from "firebase/firestore";
-import { db } from "../../firebase-config";
+import { getDocs, collection, deleteDoc, doc } from "firebase/firestore";
+import { auth, db } from "../../firebase-config";
 import React, { useState, useEffect } from "react";
 import "./allposts.css";
+import { async } from "@firebase/util";
 
-const AllPosts = () => {
+const AllPosts = (props) => {
   const [postList, setPostList] = useState([]);
   const postsCollectionRef = collection(db, "posts");
 
@@ -11,11 +12,14 @@ const AllPosts = () => {
     const getPosts = async () => {
       const data = await getDocs(postsCollectionRef);
       setPostList(data.docs.map((doc) => ({ ...doc.data(), blogid: doc.id })));
+      console.log(postList)
     };
-    console.log(postList)
     getPosts();
-  }, []);
-
+  }, [postList]);
+  const deletePost = async (blogid) => {
+      const postDoc = doc(db,"posts", blogid);
+      await deleteDoc(postDoc);
+  }
   return (
     <div>
       {postList.map((post) => {
@@ -33,23 +37,14 @@ const AllPosts = () => {
                 </p>
               </div>
               <div className="tabs-btns">
-            <div
-              className="btn_primary "
-            >
+            <button className="btn_primary " >
               Edit
-            </div>
-            <div
-              className="btn_primary"
-            >
+            </button>
+            {props.isAuth && post.author.id === auth.currentUser.uid && ( <button onClick={()=> {deletePost(post.blogid);}} className="btn_primary">
               Delete
-            </div>
+            </button>
+            )}
           </div>
-              {/* <a className="btn_primary" href="#">
-                Read More
-              </a>
-              <a className="btn_primary" href="#">
-                Read More
-              </a> */}
             </div>
           </div>
         
