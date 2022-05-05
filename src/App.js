@@ -1,24 +1,26 @@
-import logo from './logo.svg';
+import { React, useState} from "react";
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import Home from "./Components/HomePage/Home";
+import Login from "./Components/LoginPage/Login";
+import CreatePost from "./Components/Posts/CreatePost";
+import Nav from "./Components/NavBar/Nav";
 import './App.css';
 
+
 function App() {
+  const [isAuth, setAuth] = useState(false);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React with Saptarshee
-        </a>
-      </header>
-    </div>
+    <>
+    <Nav isAuth={isAuth} setAuth={setAuth}/>
+
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home isAuth={isAuth} setAuth={setAuth}/>}/>
+        <Route path="login" element={<Login setAuth={setAuth}/>}/>
+        <Route path="createpost" element={<CreatePost isAuth={isAuth}/>}/>
+      </Routes>
+    </Router>
+    </>
   );
 }
 

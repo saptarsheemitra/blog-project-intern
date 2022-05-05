@@ -1,0 +1,208 @@
+.container{
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    background-color: transparent;
+    /* color: red; */
+    /* border: 2px solid black; */
+}
+
+.input-container{
+    padding: 32px 51px;
+    margin: 16px 10px;
+    width: 50%;
+    display: flex;
+    height: inherit;
+    /* border: 2px solid black; */
+}
+
+.tab-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 32px 2px 14px 2px;
+    border-radius: 22px;
+    
+    box-shadow: 0px 0px 6px black;
+    /* border: 2px solid red; */
+}
+.tabs{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 13px 13px;
+    margin: 34px 0px -5px 0px;
+    /* border: 2px solid black; */
+}
+.tab-item{
+    height: 37px;
+    line-height: 35px;
+    padding: 0px 19px;
+    /* margin-right: 0px; */
+    cursor: pointer;
+    letter-spacing: 1px;
+    border-radius: 29px;
+    border: 2px solid black;
+    /* background-color: yellow; */
+}
+.rt-mar-btn{
+margin-right: 0px;
+}
+.lt-mar-btn{
+    margin-left: 0px;
+}
+.input-div{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    padding: 13px 13px;
+    /* border: 2px solid black; */
+}
+.input-section-one{
+    padding: 8px 0px 8px 4px;
+    margin: 0px 0px 38px 0px;
+    width: 100%;
+
+}
+.input-section-two{
+    padding: 8px 0px 8px 4px;
+    width: 100%;
+
+}
+.input-label{
+    display: flex;
+    justify-content: center;
+    padding: 1px 0px 18px 0px;
+}
+.input-area{
+    display: flex;
+    justify-content: center;
+}
+.input-field{
+    padding: 2px 0px 2px 0px;
+    width: 60vh;
+    height: 4vh;
+    border: none;
+    border-bottom: 1px solid black;
+    box-shadow: none;
+    background-color: rgba(243, 243, 243, 0.914);
+    color: black;
+    outline: none;
+}
+
+.input-text{
+    padding: 2px 0px 2px 0px;
+    width: 60vh;
+    height: 32vh;
+    border: none;
+    border-radius: 10px;
+    border-bottom: 1px solid black;
+    box-shadow: none;
+    background-color: rgba(243, 243, 243, 0.914);
+    color: black;
+    outline: none;
+}
+.input-title-font{
+    font-size: 100%;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+}
+.input-textarea-font{
+    font-size: 120%;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+}
+
+/* -----EquityBuyG--------- */
+.main-output{
+    /* border: 1px solid black; */
+    /* background-color: #70b5a4; */
+    border-radius: 22px;
+}
+.output-container{
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid black;
+    padding: 19px 10px 20px 10px
+}
+.order-charge{
+    padding: 3px 7px 3px 7px;
+    /* border: 1px dotted black; */
+}
+/* .charge-breakup{
+    margin: 11px 14px 11px 14px;
+    padding: 16px 7px 21px 7px;
+} */
+.breakup-heading{
+    display: flex;
+    justify-content: space-around;
+    padding: 9px 0px 10px 0px;
+    margin: 7px 0px 7px 0px;
+    font-weight: bolder;
+    font-size: 1.25rem;
+    border-bottom: 1px dashed black;
+}
+.amount-heading{
+    padding: 9px 0px 1px 0px;
+    margin: 0px 0px 0px 10px;
+    
+}
+.amount-show{
+    display: flex;
+    justify-content: space-between;
+    margin: 11px 14px 11px 14px;
+}
+.space-padding{
+    padding: 5px 0px;
+}
+
+.amount-heading-font{
+    font-weight: bold;
+    font-size: 1.25rem;
+    letter-spacing: 0.5px;
+}
+
+/* ----Romoving input type arrow------- */
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+/* ----------------------------------- */
+
+.cal-broker-name{
+    display: flex;
+    justify-content: space-around;
+    margin: 40px 0px 0px 0px;
+}
+.cal-name{
+    margin: 0px 28px 0px 0px;
+    font-size: larger;
+}
+.broker-logo{width:11rem;}
+
+.sub-font{
+    font-size: 95%;
+    font-weight: 400;
+    letter-spacing: 0.2px;
+}
+.sub-amount-show{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 30px 14px 11px 24px;
+}
+#active-btn{
+    background-color: aqua;
+}
