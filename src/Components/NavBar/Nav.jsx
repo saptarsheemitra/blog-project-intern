@@ -13,7 +13,6 @@ const Nav = (props) => {
   };
   const newPostRoute = () => {
     window.location.pathname = "/createpost";
-    props.setAuth(true)
   };
 
   // console.log(props.isAuth)

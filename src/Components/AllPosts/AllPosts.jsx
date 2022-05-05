@@ -37,9 +37,10 @@ const AllPosts = (props) => {
                 </p>
               </div>
               <div className="tabs-btns">
-            <button className="btn_primary " >
+              {props.isAuth && post.author.id === auth.currentUser.uid && ( <button onClick={UpdatePostRoute} className="btn_primary">
               Edit
             </button>
+            )}
             {props.isAuth && post.author.id === auth.currentUser.uid && ( <button onClick={()=> {deletePost(post.blogid);}} className="btn_primary">
               Delete
             </button>
