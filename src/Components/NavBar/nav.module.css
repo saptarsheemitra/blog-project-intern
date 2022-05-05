@@ -45,3 +45,22 @@
   display: block;
 
 }
+
+.tabitem{
+  height: 37px;
+  line-height: 35px;
+  padding: 0px 19px;
+  /* margin-right: 0px; */
+  cursor: pointer;
+  letter-spacing: 1px;
+  border-radius: 29px;
+  border: 2px solid black;
+  /* background-color: yellow; */
+}
+
+.tabitem:hover {
+  transition: all 0.3s;
+  transform: scale(1);
+  border-radius: 7px;
+  background-color: antiquewhite;
+}

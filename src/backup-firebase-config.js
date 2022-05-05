@@ -1,4 +1,3 @@
-// Import the functions you need from the SDKs you need
 import {getAuth,GoogleAuthProvider} from "firebase/auth";
 import {getFirestore} from "firebase/firestore";
 import { initializeApp } from "firebase/app";
@@ -7,12 +6,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBpSKxfEPaOueAkzhaj0hLFJ0bAnipsDRU",
-  authDomain: "test-project-cfaff.firebaseapp.com",
-  projectId: "test-project-cfaff",
-  storageBucket: "test-project-cfaff.appspot.com",
-  messagingSenderId: "96082670963",
-  appId: "1:96082670963:web:876db296d87306419e0106"
+  apiKey: "AIzaSyAIGwwIu3u2QL46lcH3bdggDc11s-Pi4cY",
+  authDomain: "blog-project-intern.firebaseapp.com",
+  projectId: "blog-project-intern",
+  storageBucket: "blog-project-intern.appspot.com",
+  messagingSenderId: "790022449746",
+  appId: "1:790022449746:web:3fdf9a848b41d8502a8d8b"
 };
 
 // Initialize Firebase

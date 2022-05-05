@@ -42,7 +42,7 @@ const Nav = (props) => {
             <li className={css.navitems} onClick={newPostRoute}>
             New Post
           </li>
-            <button onClick={signOutUser}>Sign Out</button>
+            <button className={css.tabitem} onClick={signOutUser}>Sign Out</button>
           </>
           )}
           {/* <li className={css.navitems}>Feedback</li> */}

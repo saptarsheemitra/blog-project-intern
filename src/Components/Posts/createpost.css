@@ -80,6 +80,7 @@ margin-right: 0px;
 }
 .input-area{
     display: flex;
+    /* flex-direction: column; */
     justify-content: center;
 }
 .input-field{
