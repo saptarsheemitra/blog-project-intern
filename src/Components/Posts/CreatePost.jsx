@@ -1,15 +1,13 @@
 import { async } from "@firebase/util";
-import { React, useState } from "react";
+import { React, useState , useEffect } from "react";
 import "./createpost.css";
 import { addDoc, collection } from "firebase/firestore";
 import { db, auth } from "../../firebase-config";
 import { useNavigate } from 'react-router-dom';
 
-const CreatePost = () => {
+const CreatePost = (props) => {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
-  // console.log(title)
-  // console.log(content)
   const postsCollectionRef = collection(db, "posts");
   let navigate = useNavigate();
 
@@ -21,6 +19,12 @@ const CreatePost = () => {
     });
     navigate("/");
   };
+
+  useEffect(() => {
+    if (!props.isAuth) {
+      navigate("/login");
+    }
+  }, []);
 
   return (
     <div className="container">
