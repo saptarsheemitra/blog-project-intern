@@ -21,7 +21,7 @@ const AllPosts = (props) => {
 
     // const getCooments = async () => {
     //   const data = await getDocs(commentsCollectionRef);
-    //   setComment(data.docs.map((doc) => ({ ...doc.data(), comment: doc.comment})));   **** Could not implement the add comment feature ***
+    //   setComment(data.docs.map((doc) => ({ ...doc.data(), comment: doc.comment})));   **** Failed attempt to implement the add comment feature ***
     //   console.log(comment);
     // };
     // setTimeout(getCooments, 2000);
